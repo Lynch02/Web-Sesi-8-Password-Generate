@@ -19,9 +19,6 @@ const generatePassword = (len) => {
 const getPassword = () => {
   const newPassword = generatePassword(passwordLength.value);
   password.value = newPassword;
-  setTimeout(() => {
-    alert("password has been generated!");
-  }, 1000);
 };
 
 const savePassword = () => {
@@ -32,7 +29,4 @@ const savePassword = () => {
       encodeURIComponent(`Password saya:  + ${document.title}`)
   );
   saveButton.setAttribute("download", "PasswordGenerator.txt");
-  setTimeout(() => {
-    alert("Password Di Save");
-  }, 1000);
 };
